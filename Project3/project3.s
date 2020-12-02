@@ -42,3 +42,10 @@ pass:
 	addi $t0,$t0,1 
 	j begin 
 
+loop:
+	#iterates through each character 
+	lb $s0, ($t0) 
+	beq $s0, 0, next
+	beq $s0, 10, next  	
+	addi $t0,$t0,1 	
+	beq $s0, 44, substring 
