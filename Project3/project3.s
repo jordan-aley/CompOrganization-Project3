@@ -78,3 +78,7 @@ invalid_loop:
 	#keeps track invalid characters in substring
 	lb $s0, ($t0) 
 	beq $s0, 0, insub
+	beq $s0, 10, insub  	
+	addi $t0,$t0,1 	
+	beq $s0, 44, insub 
+	j invalid_loop 
