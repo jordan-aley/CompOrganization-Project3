@@ -96,3 +96,7 @@ insub:
 	li $t3,0 
 	li $t2,0 
 	j begin
+
+substring:
+	#checks if space before valid character in substring
+	mul $t2,$t2,$t7 
