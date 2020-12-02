@@ -36,3 +36,9 @@ begin:
 	beq $s0, 32, pass 
 	move $t6, $t0 
 	j loop 
+
+pass:
+	#skips the spaces in the string
+	addi $t0,$t0,1 
+	j begin 
+
