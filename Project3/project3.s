@@ -31,3 +31,8 @@ begin:
 	lb $s0, ($t0) 
 	beq $s0, 0, insub 
 	beq $s0, 10, insub
+	beq $s0, 44, invalid_loop 
+	beq $s0, 9, pass  
+	beq $s0, 32, pass 
+	move $t6, $t0 
+	j loop 
