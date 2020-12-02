@@ -11,3 +11,7 @@ main:
 	li $a1, 1001	
 	syscall
 	jal Subprog1
+
+jump:
+	#jumps to the print function
+	j print 
