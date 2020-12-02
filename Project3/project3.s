@@ -73,3 +73,8 @@ valid:
 	addi $t3, $t3,1 
 	mul $t2,$t2,$t7 
 	j loop
+
+invalid_loop:
+	#keeps track invalid characters in substring
+	lb $s0, ($t0) 
+	beq $s0, 0, insub
