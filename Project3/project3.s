@@ -100,3 +100,10 @@ insub:
 substring:
 	#checks if space before valid character in substring
 	mul $t2,$t2,$t7 
+
+next:
+	#checks characters in substring
+	bgt $t2,0,insub 
+	bge $t3,5,insub 
+	addi $t1,$t1,1  	
+	sub $sp, $sp,4 
