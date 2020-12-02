@@ -107,3 +107,8 @@ next:
 	bge $t3,5,insub 
 	addi $t1,$t1,1  	
 	sub $sp, $sp,4 
+	sw $t6, 0($sp) 
+	move $t6,$t0  
+	lw $t4,0($sp) 
+	li $s1,0  
+	jal Subprog2
