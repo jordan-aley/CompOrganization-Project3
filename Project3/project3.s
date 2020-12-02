@@ -82,3 +82,11 @@ invalid_loop:
 	addi $t0,$t0,1 	
 	beq $s0, 44, insub 
 	j invalid_loop 
+
+insub:
+	#keeps track of # of characters in substring 
+	addi $t1,$t1,1 	
+	sub $sp, $sp,4
+	sw $t7, 0($sp) 
+	move $t6,$t0  
+	lb $s0, ($t0) 
