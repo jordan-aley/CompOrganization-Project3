@@ -49,3 +49,11 @@ loop:
 	beq $s0, 10, next  	
 	addi $t0,$t0,1 	
 	beq $s0, 44, substring 
+
+check_char:
+	#looks at each character
+	bgt $t2,0,invalid_loop 
+	beq $s0, 9,  pass 
+	beq $s0, 32, pass 
+	ble $s0, 47, invalid_loop 
+	ble $s0, 57, valid 
