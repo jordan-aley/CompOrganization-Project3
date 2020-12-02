@@ -62,3 +62,8 @@ check_char:
 	ble $s0, 96, invalid_loop 
 	ble $s0, 117, valid 	
 	bge $s0, 118, invalid_loop 
+
+space:
+	#keeps track of spaces/tabs
+	addi $t2,$t2,-1 
+	j loop
