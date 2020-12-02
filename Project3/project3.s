@@ -67,3 +67,9 @@ space:
 	#keeps track of spaces/tabs
 	addi $t2,$t2,-1 
 	j loop
+
+valid:
+	#keeps track of characters in substring
+	addi $t3, $t3,1 
+	mul $t2,$t2,$t7 
+	j loop
