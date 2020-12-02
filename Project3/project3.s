@@ -23,3 +23,11 @@ Subprog1:
 	lw $t0, 0($sp) 
 	addi $sp,$sp,4 
 	move $t6, $t0 
+
+begin:
+	#check for spaces or tabs at the start and within the input
+	li $t2,0 
+	li $t7, -1 
+	lb $s0, ($t0) 
+	beq $s0, 0, insub 
+	beq $s0, 10, insub
