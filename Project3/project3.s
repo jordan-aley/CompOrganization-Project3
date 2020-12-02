@@ -56,4 +56,9 @@ check_char:
 	beq $s0, 9,  pass 
 	beq $s0, 32, pass 
 	ble $s0, 47, invalid_loop 
-	ble $s0, 57, valid 
+	ble $s0, 57, valid
+	ble $s0, 64, invalid_loop 
+	ble $s0, 85, valid	
+	ble $s0, 96, invalid_loop 
+	ble $s0, 117, valid 	
+	bge $s0, 118, invalid_loop 
