@@ -126,3 +126,8 @@ Subprog2:
 	lb $s0, ($t4) 
 	addi $t4,$t4,1	
 	j Subprog3 
+
+continue:
+	#stores converted character
+	sw $s1,0($sp)	
+	j Subprog2
