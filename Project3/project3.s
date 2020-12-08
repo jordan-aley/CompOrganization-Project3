@@ -160,3 +160,10 @@ lowercase:
 	beq $t3, 0, combine 
 	li $t9, 32
 	j exponent
+
+exponent:
+	#raises base to desired exponent 
+	ble $t8, 1, combine	
+	mul $t9, $t9, 32 	
+	addi $t8, $t8, -1	
+	j exponent
