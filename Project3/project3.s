@@ -167,3 +167,9 @@ exponent:
 	mul $t9, $t9, 32 	
 	addi $t8, $t8, -1	
 	j exponent
+
+combine:
+	#add value together
+	mul $s2, $t9, $s0	
+	add $s1,$s1,$s2		 
+	j continue
