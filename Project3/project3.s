@@ -177,3 +177,8 @@ combine:
 done: 
 	#jump to substring
 	jr $ra	
+
+print:
+	#prints out the values
+	mul $t1,$t1,4 
+	add $sp, $sp $t1 
