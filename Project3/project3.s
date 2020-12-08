@@ -173,3 +173,7 @@ combine:
 	mul $s2, $t9, $s0	
 	add $s1,$s1,$s2		 
 	j continue
+
+done: 
+	#jump to substring
+	jr $ra	
