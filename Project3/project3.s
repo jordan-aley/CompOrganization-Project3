@@ -153,3 +153,10 @@ uppercase:
 	beq $t3, 0, combine 
 	li $t9, 32
 	j exponent
+
+lowercase:
+	#converts bits to lowercase
+	sub $s0, $s0, 87 
+	beq $t3, 0, combine 
+	li $t9, 32
+	j exponent
