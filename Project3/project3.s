@@ -136,6 +136,13 @@ Subprog3:
 	#stores # of characters left for exponent
 	move $t8, $t3	
 	li $t9, 1	
-	ble $s0, 57, number 
+	ble $s0, 57, num
 	ble $s0, 86, uppercase
 	ble $s0, 118, lowercase
+
+num:
+	#converts bits to intergers
+	sub $s0, $s0, 48	 
+	beq $t3, 0, combine	
+	li $t9, 32		
+	j exponent
