@@ -200,3 +200,10 @@ remain:
 	la $a0, comma 
 	syscall
 	j finish
+
+invalid_print:
+	#prints invalid input
+	li $v0, 4
+	la $a0, not_valid 
+	syscall	
+	j remain 
