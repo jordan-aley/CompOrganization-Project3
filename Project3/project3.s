@@ -188,3 +188,7 @@ finish:
 	sub $t1, $t1,4	
 	sub $sp,$sp,4 	
 	lw $s7, 0($sp)	
+	beq $s7,-1,invalid_print 
+	li $v0, 1
+	lw $a0, 0($sp) 
+	syscall
