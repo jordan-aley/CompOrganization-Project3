@@ -197,3 +197,6 @@ remain:
 	#checks if any characters remaining
 	beq $t1, 0,exit 
 	li $v0, 4
+	la $a0, comma 
+	syscall
+	j finish
