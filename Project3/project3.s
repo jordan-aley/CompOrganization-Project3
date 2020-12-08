@@ -192,3 +192,8 @@ finish:
 	li $v0, 1
 	lw $a0, 0($sp) 
 	syscall
+
+remain:	
+	#checks if any characters remaining
+	beq $t1, 0,exit 
+	li $v0, 4
