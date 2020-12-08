@@ -146,3 +146,10 @@ num:
 	beq $t3, 0, combine	
 	li $t9, 32		
 	j exponent
+
+uppercase:
+	#converts bits to uppercase
+	sub $s0, $s0, 55 
+	beq $t3, 0, combine 
+	li $t9, 32
+	j exponent
