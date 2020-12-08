@@ -182,3 +182,9 @@ print:
 	#prints out the values
 	mul $t1,$t1,4 
 	add $sp, $sp $t1 
+
+finish:	
+	#ends the program
+	sub $t1, $t1,4	
+	sub $sp,$sp,4 	
+	lw $s7, 0($sp)	
