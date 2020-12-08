@@ -207,3 +207,7 @@ invalid_print:
 	la $a0, not_valid 
 	syscall	
 	j remain 
+
+exit:
+	li $v0, 10
+	syscall
