@@ -4,6 +4,7 @@
 	not_valid: .asciiz "NaN"
 	comma: .asciiz ","
 
+.text
 main:
 	#reads user input
 	li $v0,8	
